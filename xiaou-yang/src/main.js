@@ -8,14 +8,15 @@ Vue.config.productionTip = false
 
 import Vant from 'vant';
 import 'vant/lib/index.css';
-
+Vue.prototype.$preImg = "http://localhost:3000";
 Vue.use(Vant);
 
-
+import store from './store/index'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
